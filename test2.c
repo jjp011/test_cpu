@@ -1,8 +1,13 @@
 #include    <unistd.h>
 #include    <sys/wait.h>
 #include    <stdio.h>
+#include    <stdlib.h>
 
-void main(){
+void main(int argc, char* argv[]){
+    if(argc <= 1){
+        printf("usage: %s #NUMCHILDS", argv[0]);
+        exit(0);
+    }
     int pid = fork();
     int wstatus;
 
