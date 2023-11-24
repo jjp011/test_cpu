@@ -45,5 +45,5 @@ void main(int argc, char* argv[]){
         int chpid = wait(&wstatus);
         printf("Child %d exited\n", chpid);
     }
-
+    exit(0);
 }
