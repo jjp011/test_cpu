@@ -5,6 +5,7 @@
 
 void display_message(int s) {
     printf("TIC ");
+    fflush(stdout);
     alarm(1);
 }
 
