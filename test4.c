@@ -3,7 +3,10 @@
 #include <signal.h>
 #include <unistd.h>
 
-void display_message(int s);
+void display_message(int s) {
+    printf("TIC ");
+    alarm(1);
+}
 
 int main(int argc, char *argv[]) {
     signal(SIGALRM, display_message);
@@ -14,7 +17,3 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 
-void display_message(int s) {
-    printf("¡Hola! Esta es una señal SIGALRM.\n");
-    alarm(1);
-}
